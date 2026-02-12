@@ -1,5 +1,2 @@
-# Report-Card-System
-___
-
-## Abstract
+# the inventory system
 ___
