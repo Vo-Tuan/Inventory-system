@@ -18,8 +18,7 @@ class Product:
             if product.get_product_id() == product_id:
                 return product
         return None
-
-
+        
 class Customer:
     def __init__(self, customer_id, name, email):
         self.customer_id = customer_id
@@ -56,7 +55,6 @@ class Order:
     
     def display_order(order):
         return f"Order ID: {order.get_order_id()}, Customer: {order.customer.get_name()}, Total: {order.calculate_total()}"
-
 
 class Employee:
     def __init__(self, employee_id, name, position):
