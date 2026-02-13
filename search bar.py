@@ -72,3 +72,7 @@ class Employee:
 
     def get_position(self):
         return self.position
+
+from datetime import datetime
+current_date = datetime.now().strftime('%Y-%m-%d %I:%M:%S %p')
+print(current_date)
