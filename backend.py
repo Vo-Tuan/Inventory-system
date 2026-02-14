@@ -7,10 +7,7 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
-
 class Product:
-    
-    
     
     def __init__(self, product_id, name, price):
         self.product_id = product_id
