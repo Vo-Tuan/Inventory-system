@@ -193,3 +193,16 @@ class Employee:
 from datetime import datetime
 current_date = datetime.now().strftime('%Y-%m-%d %I:%M:%S %p')
 print(current_date)
+
+def search_database(text):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    sql = "SELECT * FROM inventory WHERE ProductName LIKE %s"
+    val = (f"%{text}%", )
+    
+    cursor.execute(sql, val)
+    result = cursor.fetchall()
+    
+    conn.close()
+    return result
