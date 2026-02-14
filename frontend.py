@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import Button, ttk
+import search_bar
 
 #Root window
 root = tk.Tk()
@@ -49,3 +50,10 @@ for x in range(200):
     tree.insert('', 'end', text=f'{x} Example product', values=('value 1','value 2','value 3'))
 
 root.mainloop()
+
+tree.heading('2',text='Amount')
+tree.pack(fill=tk.BOTH,expand=True,padx=(0,180),side=tk.BOTTOM)
+scrollbar.config(command = tree.yview)
+ttk.Style().configure("Treeview", background="#E0E1DD", foreground="black")
+
+search_bar.create(topbar, tree)
